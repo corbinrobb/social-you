@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from './NavBar';
 import Login from './Login';
 import Feed from './Feed';
@@ -7,15 +8,19 @@ import Post from './Post';
 
 const App = () => {
   return (
-    <>
+    <Router>
       <NavBar />
       <div className="ui container">
-        <Login />
-        <Feed />
-        <PostForm />
-        <Post />
+        <Route exact path="/">
+          <Login />
+        </Route>
+        <Route path="/feed">
+          <Feed />
+          <PostForm />
+          <Post />
+        </Route>
       </div>
-    </>
+    </Router>
   );
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const PostForm = () => {
   return (
-    <div>
+    <div className="ui segment fluid">
       Post Form
     </div>
   );

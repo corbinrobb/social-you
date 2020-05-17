@@ -3,7 +3,7 @@ import React from 'react';
 const Login = () => {
   return (
     <form>
-      Form
+      Login
     </form>
   );
 }

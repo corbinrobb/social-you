@@ -7,13 +7,15 @@ import Post from './Post';
 
 const App = () => {
   return (
-    <div>
+    <>
       <NavBar />
-      <Login />
-      <Feed />
-      <PostForm />
-      <Post />
-    </div>
+      <div className="ui container">
+        <Login />
+        <Feed />
+        <PostForm />
+        <Post />
+      </div>
+    </>
   );
 }
 

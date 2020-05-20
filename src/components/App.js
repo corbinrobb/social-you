@@ -4,7 +4,6 @@ import NavBar from './NavBar';
 import Login from './Login';
 import Feed from './Feed';
 import PostForm from './PostForm';
-import Post from './Post';
 
 const App = () => {
   return (
@@ -15,9 +14,8 @@ const App = () => {
           <Login />
         </Route>
         <Route path="/feed">
-          <Feed />
           <PostForm />
-          <Post />
+          <Feed />
         </Route>
       </div>
     </Router>

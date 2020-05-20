@@ -1,9 +1,16 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
+import Post from './Post';
 
 const Feed = () => {
+  const posts =  useSelector(state => state);
+  
   return (
     <div>
-      {}
+      {posts.map(post => {
+        return <Post {...post} />
+      })}
     </div>
   );
 }

@@ -29,14 +29,14 @@ const PostForm = () => {
   }
 
   return (
-    <div className="ui segment fluid" style={{ width: '60%', margin: '2% auto' }}>
-      <form className="ui reply form" onSubmit={handleSubmit} >
+    <div className="post-form">
+      <form onSubmit={handleSubmit} >
         <textarea 
           name="content"
           value={post.content}
           onChange={handleChange}
         />
-        <button className="ui blue submit button">Post</button>
+        <button>Post</button>
       </form>
     </div>
   );

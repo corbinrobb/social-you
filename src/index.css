@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* GENERAL STYLES */
+main {
+  max-width: 60%;
+  margin: 2% auto;
+}
+
+/* NAV STYLES */
+nav {
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  box-shadow: 1px 2px 4px grey;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* POST STYLES */
+.post {
+  padding: 2rem;
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.post-form {
+  padding: 2rem;
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+}
+
+.post-form textarea {
+  width: 100%;
+}

@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Router>
       <NavBar />
-      <div className="ui container">
+      <main>
         <Route exact path="/">
           <Login />
         </Route>
@@ -17,7 +17,7 @@ const App = () => {
           <PostForm />
           <Feed />
         </Route>
-      </div>
+      </main>
     </Router>
   );
 }

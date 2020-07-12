@@ -11,7 +11,7 @@ const Post = (props) => {
         <span><i class="user icon"></i></span>
         <h3>{name}</h3>
         <div>
-          <img src={image} style={{ maxWidth: '100%' }}></img>
+          <img src={image} alt="People on bikes" ></img>
         </div>
         <div>
           {content}
@@ -21,7 +21,7 @@ const Post = (props) => {
         <div>
           <span>{date}</span>
         </div>
-        <i onClick={() => setShowComments(!showComments)} class="comment outline icon right floated">Comments</i>
+        <i onClick={() => setShowComments(!showComments)}>Comments</i>
         <i class="heart outline icon right floated"></i>
       </div>
       <div style={{ display: (showComments) ? 'block' : 'none' }}>
@@ -29,7 +29,7 @@ const Post = (props) => {
           return (
             <div>
               <span>
-                <img src={comment.image} />
+                <img alt={`Headshot of ${comment.name}`} src={comment.image} />
               </span>
               <div>
                 <span>{comment.name} </span>
@@ -38,9 +38,6 @@ const Post = (props) => {
                 </div>
                 <div>
                   {comment.content}
-                </div>
-                <div>
-                  <span>Reply</span>
                 </div>
               </div>
             </div>
@@ -52,7 +49,7 @@ const Post = (props) => {
           </div>
           <div>
             <i className="icon edit"></i> Add Reply
-        </div>
+          </div>
         </form>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [ user, setUser ] = useState({ username: '', password: '',});
@@ -13,23 +14,26 @@ const Login = () => {
 
 
   return (
-    <form onSubmit={handleSubmit} className="ui segment input fluid">
-      <input
-        name="username"
-        type="text"
-        placeholder="username"
-        value={user.username}
-        onChange={handleChange}
-      />
-      <input
-        name="password"
-        type="password"
-        placeholder="password"
-        value={user.password}
-        onChange={handleChange}
-      />
-      <button className="ui button">Login</button>
-    </form>
+    <div className="login-signup">
+      <form onSubmit={handleSubmit}>
+        <input
+          name="username"
+          type="text"
+          placeholder="username"
+          value={user.username}
+          onChange={handleChange}
+        />
+        <input
+          name="password"
+          type="password"
+          placeholder="password"
+          value={user.password}
+          onChange={handleChange}
+        />
+        <button>Login</button>
+        <Link className="signup-button" to="/signup">Sign Up</Link>
+      </form>
+    </div>
   );
 }
 

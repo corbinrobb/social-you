@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Login = () => {
+const SignUp = () => {
   const [user, setUser] = useState({ username: '', password: '', });
 
   const handleChange = e => {
@@ -12,22 +12,24 @@ const Login = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="ui segment input fluid">
-      <input
-        name="username"
-        placeholder="username"
-        value={user.username}
-        onChange={handleChange}
-      />
-      <input
-        name="password"
-        placeholder="password"
-        value={user.password}
-        onChange={handleChange}
-      />
-      <button className="ui button">Sign Up</button>
-    </form>
+    <div className="login-signup">
+      <form onSubmit={handleSubmit}>
+        <input
+          name="username"
+          placeholder="username"
+          value={user.username}
+          onChange={handleChange}
+        />
+        <input
+          name="password"
+          placeholder="password"
+          value={user.password}
+          onChange={handleChange}
+        />
+        <button>Sign Up</button>
+      </form>
+    </div>
   );
 }
 
-export default Login;
+export default SignUp;

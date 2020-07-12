@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import submitPost from '../actions';
 
 const PostForm = () => {
   const [ post, setPost ] = useState({
@@ -29,14 +28,14 @@ const PostForm = () => {
   }
 
   return (
-    <div className="ui segment fluid" style={{ width: '60%', margin: '2% auto' }}>
-      <form className="ui reply form" onSubmit={handleSubmit} >
+    <div className="post-form">
+      <form onSubmit={handleSubmit} >
         <textarea 
           name="content"
           value={post.content}
           onChange={handleChange}
         />
-        <button className="ui blue submit button">Post</button>
+        <button className="post-button">Post</button>
       </form>
     </div>
   );

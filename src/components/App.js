@@ -4,20 +4,24 @@ import NavBar from './NavBar';
 import Login from './Login';
 import Feed from './Feed';
 import PostForm from './PostForm';
+import SignUp from './SignUp';
 
 const App = () => {
   return (
     <Router>
       <NavBar />
-      <div className="ui container">
+      <main>
         <Route exact path="/">
           <Login />
+        </Route>
+        <Route path="/signup">
+          <SignUp />
         </Route>
         <Route path="/feed">
           <PostForm />
           <Feed />
         </Route>
-      </div>
+      </main>
     </Router>
   );
 }

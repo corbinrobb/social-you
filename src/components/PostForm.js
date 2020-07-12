@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import submitPost from '../actions';
 
 const PostForm = () => {
   const [ post, setPost ] = useState({
@@ -36,7 +35,7 @@ const PostForm = () => {
           value={post.content}
           onChange={handleChange}
         />
-        <button>Post</button>
+        <button className="post-button">Post</button>
       </form>
     </div>
   );

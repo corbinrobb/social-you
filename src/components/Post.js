@@ -9,7 +9,7 @@ const Post = (props) => {
     <div className="post">
       <div>
         <span><i class="user icon"></i></span>
-        <a>{name}</a>
+        <h3>{name}</h3>
         <div>
           <img src={image} style={{ maxWidth: '100%' }}></img>
         </div>
@@ -28,11 +28,11 @@ const Post = (props) => {
         {comments.map(comment => {
           return (
             <div>
-              <a>
+              <span>
                 <img src={comment.image} />
-              </a>
+              </span>
               <div>
-                <a>{comment.name} </a>
+                <span>{comment.name} </span>
                 <div>
                   <span>{comment.date}</span>
                 </div>
@@ -40,7 +40,7 @@ const Post = (props) => {
                   {comment.content}
                 </div>
                 <div>
-                  <a>Reply</a>
+                  <span>Reply</span>
                 </div>
               </div>
             </div>

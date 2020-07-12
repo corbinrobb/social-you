@@ -5,29 +5,87 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Noto Sans TC', sans-serif;
+  /* border: 1px solid red; */
+  max-width: 100%;
 }
 
 /* GENERAL STYLES */
+body, #root {
+  min-height: 100vh;
+}
+
 main {
   max-width: 60%;
   margin: 2% auto;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+textarea {
+  resize: none;
+}
+
+button, .signup-button {
+  background-color: blueviolet;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid blueviolet;
+  border-radius: 0.2rem;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
 /* NAV STYLES */
 nav {
   width: 100%;
-  border: 1px solid gray;
+  padding: 0.5rem 1rem;
+  /* border: 1px solid grey; */
   border-radius: 0.5rem;
-  box-shadow: 1px 2px 4px grey;
+  box-shadow: 1px 2px 8px lightgrey;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-items {
+  width: 30%;
   display: flex;
   justify-content: space-around;
 }
 
+/* LOGIN/SIGNUP STYLES */
+.login-signup {
+  padding: 6rem 2rem 2rem 2rem;
+  border: 1px solid lightgray;
+  box-shadow: 1px 2px 8px lightgrey;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.login-signup form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login-signup input {
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+  border-radius: .2rem;
+  border: 1px solid lightgray;
+}
 
 /* POST STYLES */
 .post {
   padding: 2rem;
   border: 1px solid lightgray;
+  box-shadow: 1px 2px 8px lightgrey;
   border-radius: 1rem;
   margin-top: 1rem;
 }
@@ -35,6 +93,7 @@ nav {
 .post-form {
   padding: 2rem;
   border: 1px solid lightgray;
+  box-shadow: 1px 2px 8px lightgrey;
   border-radius: 1rem;
 }
 

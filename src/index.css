@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
   /* border: 1px solid red; */
   max-width: 100%;
 }
 
 /* GENERAL STYLES */
-body, #root {
+body,
+#root {
   min-height: 100vh;
 }
 
@@ -28,7 +29,7 @@ textarea {
   resize: none;
 }
 
-button, .signup-button {
+button {
   background-color: blueviolet;
   padding: 0.2rem 0.5rem;
   border: 1px solid blueviolet;
@@ -63,6 +64,7 @@ nav {
   box-shadow: 1px 2px 8px lightgrey;
   border-radius: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   max-width: 600px;
   margin: 5rem auto;
@@ -77,8 +79,26 @@ nav {
 .login-signup input {
   padding: 0.3rem;
   margin-bottom: 1rem;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   border: 1px solid lightgray;
+}
+
+.login-signup-link {
+  color: blueviolet;
+  padding: 1rem;
+  text-align: center;
+}
+
+.login-signup-link:hover {
+  color: blue;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  padding: 0.5rem;
+  border: 1px solid lightgray;
+  background-color: lightyellow;
 }
 
 /* POST STYLES */
@@ -95,8 +115,11 @@ nav {
   border: 1px solid lightgray;
   box-shadow: 1px 2px 8px lightgrey;
   border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.post-form textarea {
+.post-form textarea,
+.post-form input {
   width: 100%;
 }

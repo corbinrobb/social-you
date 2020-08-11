@@ -1,17 +1,31 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import NavBar from './NavBar';
-import Login from './Login';
-import Feed from './Feed';
-import PostForm from './PostForm';
-import SignUp from './SignUp';
+import React, { useEffect } from "react";
+import { Route, useHistory } from "react-router-dom";
+import NavBar from "./NavBar";
+import Login from "./Login";
+import Feed from "./Feed";
+import PostForm from "./PostForm";
+import SignUp from "./SignUp";
+import Landing from "./Landing";
 
 const App = () => {
+  const { push } = useHistory();
+
+  useEffect(() => {
+    const user_id = localStorage.getItem("user_id");
+
+    if (user_id) {
+      push("/feed");
+    }
+  }, [push]);
+
   return (
-    <Router>
+    <>
       <NavBar />
       <main>
         <Route exact path="/">
+          <Landing />
+        </Route>
+        <Route path="/login">
           <Login />
         </Route>
         <Route path="/signup">
@@ -22,8 +36,8 @@ const App = () => {
           <Feed />
         </Route>
       </main>
-    </Router>
+    </>
   );
-}
+};
 
 export default App;

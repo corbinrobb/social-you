@@ -1,17 +1,34 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
+import { axiosWithAuth } from "../utils/axiosWithAuth";
 
 const Login = () => {
-  const [ user, setUser ] = useState({ username: '', password: '',});
+  const [user, setUser] = useState({ username: "", password: "" });
+  const [errorMessage, setErrorMesage] = useState(null);
+  const { push } = useHistory();
 
-  const handleChange = e => {
-    setUser({ ...user, [e.target.name]: e.target.value })
-  }
+  const handleChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
 
-  const handleSubmit = e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-  }
 
+    if (!user.username || !user.password) {
+      return setErrorMesage("Please provide both a username and password");
+    }
+
+    try {
+      const { data } = await axiosWithAuth().post("/auth/login", user);
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user_id", data.id);
+      push("/feed");
+    } catch (error) {
+      console.log(error);
+      setErrorMesage(error.response.data.error);
+      setUser({ username: "", password: "" });
+    }
+  };
 
   return (
     <div className="login-signup">
@@ -31,10 +48,13 @@ const Login = () => {
           onChange={handleChange}
         />
         <button>Login</button>
-        <Link className="signup-button" to="/signup">Sign Up</Link>
       </form>
+      <Link className="login-signup-link" to="/signup">
+        Don't have an account?
+      </Link>
+      {errorMessage ? <p className="error">{errorMessage}</p> : null}
     </div>
   );
-}
+};
 
 export default Login;

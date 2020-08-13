@@ -13,7 +13,6 @@ const NavBar = () => {
       <div className="nav-items">
         <Link to="/feed">Feed</Link>
         <Link to="/profile">Profile</Link>
-
         <Link onClick={logoutUser} to="/login">
           Log Out
         </Link>

@@ -123,3 +123,9 @@ nav {
 .post-form input {
   width: 100%;
 }
+
+.loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}

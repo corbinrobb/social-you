@@ -21,7 +21,7 @@ const Feed = () => {
         })
       ) : (
         <div className="loader">
-          <MoonLoader size={100} />
+          <MoonLoader size={50} />
         </div>
       )}
     </div>

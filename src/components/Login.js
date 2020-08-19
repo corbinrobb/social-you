@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import { loginUser } from "../actions";
+import { useDispatch } from "react-redux";
 
 const Login = () => {
   const [user, setUser] = useState({ username: "", password: "" });
   const [errorMessage, setErrorMesage] = useState(null);
   const { push } = useHistory();
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
@@ -20,6 +23,7 @@ const Login = () => {
 
     try {
       const { data } = await axiosWithAuth().post("/auth/login", user);
+      dispatch(loginUser(data.user_id));
       localStorage.setItem("token", data.token);
       localStorage.setItem("user_id", data.id);
       push("/feed");

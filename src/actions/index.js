@@ -17,3 +17,18 @@ export const fetchPosts = () => async (dispatch) => {
     console.error(error);
   }
 };
+
+export const loginUser = (user_id) => async (dispatch) => {
+  try {
+    const { data } = await axiosWithAuth().get(`/users/${user_id}`);
+    dispatch({ type: "LOGIN_USER", payload: data });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const logoutUser = () => {
+  return {
+    type: "LOGOUT_USER",
+  };
+};

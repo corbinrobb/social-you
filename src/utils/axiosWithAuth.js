@@ -5,7 +5,7 @@ export const axiosWithAuth = () => {
     headers: {
       Authorization: localStorage.getItem("token"),
     },
-    // baseURL: "https://social-you.herokuapp.com/api",
-    baseURL: "http://localhost:5000/api",
+    baseURL: "https://social-you.herokuapp.com/api",
+    // baseURL: "http://localhost:5000/api",
   });
 };

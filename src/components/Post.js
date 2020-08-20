@@ -7,7 +7,7 @@ const Post = (props) => {
   const { contents, post_pic_url, posted_at, username } = props;
 
   const formatDate = (dateInfo) => {
-    const [yearMonthDay] = dateInfo.split(" ");
+    const [yearMonthDay] = dateInfo.split("T");
     const [year, month, day] = yearMonthDay.split("-");
 
     const newDateInfo = new Date(+year, +month - 1, +day);

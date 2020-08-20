@@ -23,7 +23,7 @@ const Login = () => {
 
     try {
       const { data } = await axiosWithAuth().post("/auth/login", user);
-      dispatch(loginUser(data.user_id));
+      dispatch(loginUser(data.id));
       localStorage.setItem("token", data.token);
       localStorage.setItem("user_id", data.id);
       push("/feed");

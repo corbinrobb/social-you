@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import MoonLoader from "react-spinners/MoonLoader";
 
 import Post from "./Post";
-import { fetchPosts } from "../actions";
+import { fetchPosts } from "../../actions";
 
 const Feed = () => {
   const posts = useSelector((state) => state.posts);

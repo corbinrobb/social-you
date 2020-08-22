@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { submitPost } from "../actions";
+import { submitPost } from "../../actions";
 
 const postInitial = {
   post_pic_url: "",

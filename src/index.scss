@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
+
+// RESET
+@import "./styles/reset.scss";
+
+// GENERAL STYLES
+@import "./styles//general.scss";
+
+// COMPONENT STYLES
+@import "./components/Nav/nav.scss";
+@import "./components/LoginSignup/login-signup.scss";
+@import "./components/Feed/feed";

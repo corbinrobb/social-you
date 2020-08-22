@@ -1,0 +1,26 @@
+nav {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 2px 8px lightgrey;
+  display: flex;
+  justify-content: space-between;
+
+  .nav-items {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+
+    a {
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.2rem;
+
+      &:hover {
+        box-shadow: 1px 2px 8px lightgrey;
+        background-color: blueviolet;
+        color: white;
+      }
+    }
+  }
+}

@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { Route, useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import NavBar from "./NavBar";
-import Login from "./Login";
-import Feed from "./Feed";
-import PostForm from "./PostForm";
-import SignUp from "./SignUp";
-import Landing from "./Landing";
-import PrivateRoute from "./PrivateRoute";
-import { loginUser } from "../actions";
+import NavBar from "./components/Nav/NavBar";
+import Login from "./components/LoginSignup/Login";
+import Feed from "./components/Feed/Feed";
+import PostForm from "./components/Feed/PostForm";
+import SignUp from "./components/LoginSignup/SignUp";
+import Landing from "./components/Landing";
+import PrivateRoute from "./components/PrivateRoute";
+import { loginUser } from "./actions";
 
 const App = () => {
   const { push } = useHistory();

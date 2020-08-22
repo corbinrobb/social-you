@@ -1,0 +1,32 @@
+.post {
+  padding: 2rem;
+  border: 1px solid lightgray;
+  box-shadow: 1px 2px 8px lightgrey;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.post-form {
+  padding: 2rem;
+  border: 1px solid lightgray;
+  box-shadow: 1px 2px 8px lightgrey;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  textarea,
+  input {
+    width: 100%;
+    border: 1px solid lightgray;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
